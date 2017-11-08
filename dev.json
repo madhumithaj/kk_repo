@@ -206,7 +206,7 @@
                 "resourceGuid": "7490f1bc-585e-4462-bce3-f27d73855b66",
                 "addressSpace": {
                     "addressPrefixes": [
-                        "10.44.0.0/16"
+                        "10.55.0.0/16"
                     ]
                 },
                 "subnets": [
@@ -230,15 +230,15 @@
       "name": "[variables('NICName')]",
       "apiVersion": "[parameters('settings').apiVersions.network]",
       "location": "[resourceGroup().location]",
-      "dependsOn": [ 
-      "[concat('Microsoft.Network/virtualNetworks/', parameters('settings').network.devVnet)]"
-      ],
+      "dependsOn": [
+       "[concat('Microsoft.Network/virtualNetworks/', parameters('settings').network.devVnet)]"
+	  ],
       "properties": {
         "ipConfigurations": [
           {
             "name": "ipconfig1",
             "properties": {
-              "privateIPAddress": "10.44.6.25",
+              "privateIPAddress": "10.55.6.25",
               "privateIPAllocationMethod": "Static",
               "subnet": {
                 "id": "[concat(resourceId(variables('devVnetRg'), 'Microsoft.Network/virtualNetworks', variables('devVnet')), '/subnets/', variables('devSubnet'))]"
