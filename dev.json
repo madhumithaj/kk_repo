@@ -211,7 +211,7 @@
                 },
                 "subnets": [
                     {
-                        "name": "jpdc-dev-subnet",
+                        "name": "[parameters('settings').network.devSubnet]",
                         "etag": "W/\"54d876d2-4962-454f-8d1d-f71caf8ff8e9\"",
                         "properties": {
                             "provisioningState": "Succeeded",
