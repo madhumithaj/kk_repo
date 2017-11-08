@@ -215,7 +215,7 @@
                         "etag": "W/\"54d876d2-4962-454f-8d1d-f71caf8ff8e9\"",
                         "properties": {
                             "provisioningState": "Succeeded",
-                            "addressPrefix": "10.44.6.0/24"
+                            "addressPrefix": "10.55.6.0/24"
                         }
                     }
                 ],
