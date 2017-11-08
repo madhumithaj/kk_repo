@@ -230,7 +230,9 @@
       "name": "[variables('NICName')]",
       "apiVersion": "[parameters('settings').apiVersions.network]",
       "location": "[resourceGroup().location]",
-      "dependsOn": [ ],
+      "dependsOn": [ 
+      "[concat('Microsoft.Network/virtualNetworks/', parameters('settings').network.devVnet)]"
+      ],
       "properties": {
         "ipConfigurations": [
           {
