@@ -17,7 +17,7 @@
         "location": "westus",
         "locationAbbrv": "",
 
-       
+        
         "adminUsername": "jpdc-admin",
 		"adminPassword": "Jpdc-admin1234",
 
@@ -50,8 +50,8 @@
           "devVnetRg": "jpdc-arm-validation",
           "devVnet": "jpdc-dev-vnet",
           "devSubnet": "jpdc-dev-subnet",
-          "devNodeIps": ["10.44.6.25", "10.44.6.26"],
-          "devGatewayIp": "10.44.6.37",
+          "devNodeIps": ["10.55.6.25", "10.55.6.26"],
+          "devGatewayIp": "10.55.6.37",
           "devGatewayVnet": "jpdc-services-vnet",
           "devGatewaySubnet": "jpdc-appgateway-subnet",
           "devNodeSubnet": "jpdc-application-subnet",
@@ -70,7 +70,7 @@
     },
 
     "templateUrl": {
-      "value": " "https://raw.githubusercontent.com/madhumithaj/kk_repo/master/""
+      "value": "https://raw.githubusercontent.com/madhumithaj/kk_repo/master/"
     }
   }
 }
