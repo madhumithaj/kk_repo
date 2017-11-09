@@ -16,13 +16,13 @@
         "description": "Name of the scale set, i.e. jpdc-dev"
       }
     },
-    "adminUsername": {
+	"adminUsername": {
       "type": "string",
       "metadata": {
         "description": "User name for the Virtual Machine."
       }
     },
-   "adminPassword": {
+ "adminPassword": {
       "type": "securestring",
       "metadata": {
         "description": "Password for the Virtual Machine."
@@ -232,7 +232,7 @@
                 "provisioningState": "Succeeded",                
                 "addressSpace": {
                     "addressPrefixes": [
-                        "10.5.0.0/16"
+                        "10.9.0.0/16"
                     ]
                 },
                 "subnets": [
@@ -240,7 +240,7 @@
                         "name": "[parameters('settings').network.devSubnet]",                       
                         "properties": {
                             "provisioningState": "Succeeded",
-                            "addressPrefix": "10.5.6.0/24"
+                            "addressPrefix": "10.9.6.0/24"
                         }
                     }
                 ],
