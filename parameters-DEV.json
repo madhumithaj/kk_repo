@@ -17,7 +17,8 @@
         "location": "westus",
         "locationAbbrv": "",
 
-        
+        "prepCommon": "/dev/prepCommon.json",
+
         "adminUsername": "jpdc-admin",
 		"adminPassword": "Jpdc-admin1234",
 
@@ -47,11 +48,11 @@
         "quote": "'",
 
         "network": {
-          "devVnetRg": "jpdc-arm-validation",
-          "devVnet": "jpdc-dev-vnet",
-          "devSubnet": "jpdc-dev-subnet",
-          "devNodeIps": ["10.55.6.25", "10.55.6.26"],
-          "devGatewayIp": "10.55.6.37",
+          "devVnetRg": "jpdc-validation",
+          "devVnet": "jpdc-vnet",
+          "devSubnet": "jpdc-subnet",
+          "devNodeIps": ["10.5.6.25", "10.5.6.26"],
+          "devGatewayIp": "10.5.6.37",
           "devGatewayVnet": "jpdc-services-vnet",
           "devGatewaySubnet": "jpdc-appgateway-subnet",
           "devNodeSubnet": "jpdc-application-subnet",
