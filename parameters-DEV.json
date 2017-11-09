@@ -53,7 +53,7 @@
         "quote": "'",
 
         "network": {
-          "devVnetRg": "jpdc-arm-validation",
+          "devVnetRg": "jpdc-arm-validation1",
           "devVnet": "jpdc-vnet",
           "devSubnet": "jpdc-subnet",
           "devNodeIps": "10.5.6.26",
