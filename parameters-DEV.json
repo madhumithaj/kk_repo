@@ -17,7 +17,7 @@
         "location": "westus",
         "locationAbbrv": "",
 
-        "prepCommon": "/dev/prepCommon.json",
+        
 
         "adminUsername": "jpdc-admin",
 		"adminPassword": "Jpdc-admin1234",
@@ -48,7 +48,7 @@
         "quote": "'",
 
         "network": {
-          "devVnetRg": "jpdc-validation",
+          "devVnetRg": "jpdc-arm-validation",
           "devVnet": "jpdc-vnet",
           "devSubnet": "jpdc-subnet",
           "devNodeIps": ["10.5.6.25", "10.5.6.26"],
