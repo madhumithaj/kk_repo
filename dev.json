@@ -41,6 +41,12 @@
       "metadata": {
         "description": "Name of the availability set to have each node part of"
       }
+    },
+	"sshKeyData": {
+      "type": "string",
+      "metadata": {
+        "description": "SSH rsa public key file as a string."
+      }
     }
     },
 
@@ -310,7 +316,7 @@
               "publicKeys": [
                 {
                   "path": "[variables('sshKeyPath')]",
-                  "keyData": "jpdc-dev-ssh-key"
+                  "keyData": "[parameters('sshKeyData')]"
                 }
               ]
             }
