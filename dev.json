@@ -52,10 +52,10 @@
     "vmName": "[concat(parameters('nodeName').name,'-vm')]",
     "vmSize": "[parameters('settings').vmSizes.devvmsize]",
     "count": "[parameters('settings').nodeCount.devvm]",
-
+	"privateIPAddressName": "jpdc-dev-privateIP",
     "NICName": "[concat(parameters('nodeName').name, '-nic1')]",
     "ipArray": "[parameters('settings').network.devNodeIps]",
-	"privateIPAddress": "[parameters('settings').network.devNodeIps]",
+	
     "devVnetRg": "[parameters('settings').network.devVnetRg]",
     "devVnet": "[parameters('settings').network.devVnet]",
     "devSubnet": "[parameters('settings').network.devSubnet]",
@@ -262,7 +262,7 @@
           {
             "name": "ipconfig1",
             "properties": {
-              "privateIPAddress": "[variables('privateIPAddress')]",
+              "privateIPAddress": "[variables('ipArray')[parameters('nodeName')]]",
               "privateIPAllocationMethod": "Static",
               "subnet": {
                 "id": "[concat(resourceId(variables('devVnetRg'), 'Microsoft.Network/virtualNetworks', variables('devVnet')), '/subnets/', variables('devSubnet'))]"
@@ -308,7 +308,7 @@
             "disablePasswordAuthentication": true,
             "sshCommand": {
 			"type": "string",
-			"value": "[concat('ssh ', parameters('adminUsername'), '@', reference(variables('privateIPAddress')))]"
+			"value": "[concat('ssh ', parameters('adminUsername'), '@', reference(variables('ipArray')[parameters('nodeName')]))]"
 			}
           }
         },
