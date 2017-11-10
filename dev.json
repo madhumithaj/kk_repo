@@ -41,6 +41,21 @@
       "metadata": {
         "description": "Name of the availability set to have each node part of"
       }
+    },
+	"sshKey": {
+      "value": null,
+      "type": "secureString",
+      "metadata": {
+        "description": "Private SSH key for the ahm admin user that is installed in the id_rsa file"
+      }
+    },
+
+    "sshPub": {
+      "value": null,
+      "type": "secureString",
+      "metadata": {
+        "description": "Public SSH key for the ahm admin user that is installed in the authorized keys file"
+      }
     }
     },
 
