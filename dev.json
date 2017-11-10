@@ -42,19 +42,10 @@
         "description": "Name of the availability set to have each node part of"
       }
     },
-	"sshKey": {
-      "value": null,
-      "type": "secureString",
+	"sshKeyData": {
+      "type": "string",
       "metadata": {
-        "description": "Private SSH key for the ahm admin user that is installed in the id_rsa file"
-      }
-    },
-
-    "sshPub": {
-      "value": null,
-      "type": "secureString",
-      "metadata": {
-        "description": "Public SSH key for the ahm admin user that is installed in the authorized keys file"
+        "description": "SSH rsa public key file as a string."
       }
     }
     },
@@ -70,7 +61,7 @@
 	"privateIPAddressName": "jpdc-dev-privateIP",
     "NICName": "[concat(parameters('nodeName').name, '-nic1')]",
     "ipArray": "[parameters('settings').network.devNodeIps]",
-	
+	"sshKeyPath": "[concat('/home/',parameters('adminUsername'),'/.ssh/authorized_keys')]",
     "devVnetRg": "[parameters('settings').network.devVnetRg]",
     "devVnet": "[parameters('settings').network.devVnet]",
     "devSubnet": "[parameters('settings').network.devSubnet]",
@@ -324,8 +315,8 @@
             "ssh": {
               "publicKeys": [
                 {
-                  "path": "[concat('/home/', parameters('settings').adminUsername, '/.ssh/authorized_keys')]",
-                  "keyData": "[parameters('sshPub')]"
+                  "path": "[variables('sshKeyPath')]",
+                  "keyData": "[parameters('sshKeyData')]"
                 }
               ]
             }
