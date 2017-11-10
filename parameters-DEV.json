@@ -16,7 +16,9 @@
 	"adminPassword":{
 	"value": "Jpdc-admin1234"
 	},
-	
+	"sshKeyData": {
+      "value": "jpdc-dev-ssh-key"
+    },
     "settings": {
       "value": {
         "stage": "DEV",
