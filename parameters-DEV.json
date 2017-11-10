@@ -16,7 +16,9 @@
 	"adminPassword":{
 	"value": "Jpdc-admin1234"
 	},
-
+"sshPub": {
+      "value": "jpdc-shh-pub-key"
+    },
     "settings": {
       "value": {
         "stage": "DEV",
