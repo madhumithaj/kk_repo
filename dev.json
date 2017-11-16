@@ -221,7 +221,33 @@
             "dependsOn": []
         },
 	
-      
+      {
+            "comments": "Generalized from resource: virtualNetworks/jpdc-dev-vnet'.",
+            "type": "Microsoft.Network/virtualNetworks",
+            "name": "[parameters('settings').network.devVnet]",
+            "apiVersion": "2017-06-01",
+            "location": "westus",
+            "scale": null,
+            "properties": {
+                "provisioningState": "Succeeded",                
+                "addressSpace": {
+                    "addressPrefixes": [
+                        "10.5.0.0/16"
+                    ]
+                },
+                "subnets": [
+                    {
+                        "name": "[parameters('settings').network.devSubnet]",                       
+                        "properties": {
+                            "provisioningState": "Succeeded",
+                            "addressPrefix": "10.5.6.0/24"
+                        }
+                    }
+                ],
+                "virtualNetworkPeerings": []
+            },
+            "dependsOn": []
+        },
         
 		{
 		"comments": "Network Interface for this dev node, should be a static IP",
@@ -237,7 +263,7 @@
           {
             "name": "ipconfig1",
             "properties": {
-              "privateIPAddress": "[variables('ipArray')]",
+              "privateIPAddress": "10.5.6.26",
               "privateIPAllocationMethod": "Static",
               "subnet": {
                 "id": "[concat(resourceId(variables('devVnetRg'), 'Microsoft.Network/virtualNetworks', variables('devVnet')), '/subnets/', variables('devSubnet'))]"
