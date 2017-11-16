@@ -23,7 +23,7 @@
         "location": "westus",
         "locationAbbrv": "",
 
-       
+        "prepCommon": "/dev/prepCommon.json",
 
         
 
@@ -54,10 +54,10 @@
 
         "network": {
           "devVnetRg": "jpdc-services-westus-rg",
-          "devVnet": "jpdc-vnet",
-          "devSubnet": "jpdc-subnet",
-          "devNodeIps": "10.5.0.26",
-          "devGatewayIp": "10.5.0.37",
+          "devVnet": "jpdc-services-vnet",
+          "devSubnet": "jpdc-dmz-subnet",
+          "devNodeIps": "10.44.47.1",
+          "devGatewayIp": "10.44.47.37",
           "devGatewayVnet": "jpdc-services-vnet",
           "devGatewaySubnet": "jpdc-appgateway-subnet",
           "devNodeSubnet": "jpdc-application-subnet",
